@@ -1,0 +1,55 @@
+site_name: PsyCap — руководство
+site_description: Запись и воспроизведение действий игроков, сцены и веб-редактор для Paper
+docs_dir: pages
+site_dir: site
+# Поставьте адрес публичного репозитория/сайта, когда он появится.
+# site_url: https://<аккаунт>.github.io/<репозиторий>/
+# repo_url: https://github.com/<аккаунт>/<репозиторий>
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+      # Кириллические заголовки: стандартный slugify вырезает всё, кроме латиницы, и ссылки-якоря ломаются.
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Введение: index.md
+  - Установка: install.md
+  - Основные понятия: concepts.md
+  - Запись сцены: recording.md
+  - Воспроизведение и управление: playback.md
+  - Вселение в NPC: possession.md
+  - Съёмка от первого лица (FPV): fpv.md
+  - Веб-редактор:
+      - Вход: web/login.md
+      - Сцены и доступ: web/scenes.md
+      - Нации и жители: web/nations.md
+  - Справочник:
+      - Команды и права: reference/commands.md
+      - Настройки (config.yml): reference/config.md
+      - Файлы данных: reference/files.md
+  - Вопросы и ответы: faq.md

@@ -1,0 +1,26 @@
+# Руководство PsyCap
+
+Пользовательское руководство к плагину PsyCap: установка, команды, веб-редактор, настройки. Написано на Markdown,
+собирается [MkDocs Material](https://squidfunnel.github.io/mkdocs-material/).
+
+> Этот репозиторий — зеркало: источник правды лежит в закрытом репозитории плагина (папка `manual/`), а сюда
+> содержимое попадает автоматически. Правки лучше предлагать в виде issue.
+
+## Собрать локально
+
+```bash
+python -m venv .venv
+.venv/bin/pip install -r requirements.txt     # на Windows: .venv\Scripts\pip
+.venv/bin/mkdocs serve                        # http://127.0.0.1:8000, обновляется при правках
+.venv/bin/mkdocs build --strict               # проверка: битые ссылки считаются ошибкой
+```
+
+## Структура
+
+| Путь | Что |
+| --- | --- |
+| `mkdocs.yml` | настройки сайта и меню (`nav`) |
+| `pages/` | страницы руководства |
+| `requirements.txt` | версии MkDocs и темы |
+
+Новая страница — это новый `.md` в `pages/` и строка в `nav` файла `mkdocs.yml`.
