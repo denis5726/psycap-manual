@@ -2,9 +2,9 @@ site_name: PsyCap — руководство
 site_description: Запись и воспроизведение действий игроков, сцены и веб-редактор для Paper
 docs_dir: pages
 site_dir: site
-# Поставьте адрес публичного репозитория/сайта, когда он появится.
-# site_url: https://<аккаунт>.github.io/<репозиторий>/
-# repo_url: https://github.com/<аккаунт>/<репозиторий>
+site_url: https://denis5726.github.io/psycap-manual/
+repo_url: https://github.com/denis5726/psycap-manual
+copyright: Руководство PsyCap © denis5726, лицензия CC BY 4.0
 
 theme:
   name: material
@@ -41,6 +41,7 @@ nav:
   - Установка: install.md
   - Основные понятия: concepts.md
   - Запись сцены: recording.md
+  - Режиссура: directing.md
   - Воспроизведение и управление: playback.md
   - Вселение в NPC: possession.md
   - Съёмка от первого лица (FPV): fpv.md
